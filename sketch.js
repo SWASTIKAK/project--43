@@ -17,7 +17,7 @@ function preload(){
 
 function setup() {
   createCanvas(950,600);
- spacecraft =  createSprite(800, 485, 50, 50);
+ spacecraft =  createSprite(800, 505, 50, 50);
  spacecraft.addAnimation("sc",sc1Img );
  spacecraft.scale = 0.3;
  spacecraft.x =  Math.round(random(330,900));
@@ -54,6 +54,11 @@ function draw() {
     spacecraft.addAnimation("sc",sc4Img);
     spacecraft.x = spacecraft.x + 5;
   }
+  if(keyCode===UP_ARROW){
+   
+    spacecraft.y = spacecraft.y - 5;
+  }
+  
   
   }
   if(spacecraft.isTouching(rect) ){
